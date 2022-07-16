@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['view_route_urls\\view_route_urls\\settings.py', 'view_route_urls\\app_example\\template_connect_view.py', 'view_route_urls\\app_example\\urls.py', 'view_route_urls\\templates\\example.html']
+recent_files = []
 
 [main]
 version = 0.2.0
