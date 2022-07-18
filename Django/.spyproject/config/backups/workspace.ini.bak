@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = []
+recent_files = ['C:\\Users\\Suresh Ravikumar\\.spyder-py3\\temp.py', 'models_database\\sample_application\\models.py', 'models_database\\models_database\\settings.py', 'models_database\\sample_application\\apps.py', 'models_database\\sample_application\\migrations\\0001_initial.py']
 
 [main]
 version = 0.2.0
