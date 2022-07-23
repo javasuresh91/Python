@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+<title>Template Rendering</title>
+</head>
+
+<body>
+
+<h2>Different Way of rendering </h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+{{form.as_p}} <!-- It will add <P> for each component -->
+
+
+{{form.as_ul}} <!-- It will add <Ul> for each component -->
+<h2>As table</h2>
+{{form.as_table}} <!-- It will add <table> for each component -->
+
+
+
+
+
+
+<input type="submit" value="Ok">
+
+</form>
+
+<h2>Accessing Individual</h2>
+
+{{form.first_name.label_tag}} {{form.first_name}}
+<div>
+{{form.last_name}} {{form.last_name.label_tag}}
+</div>
+
+
+<h2>Looping</h2>
+
+{% for f in form %}
+
+<div class="form-control">
+
+{{f.label_tag}} {{f}}
+
+</div>
+
+{% endfor %}
+</body>
+
+
+</html>
