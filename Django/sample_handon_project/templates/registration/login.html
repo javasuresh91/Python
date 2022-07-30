@@ -1,0 +1,46 @@
+<html>
+
+<!-- STEP 1 : Check for Error -->
+
+{% if form.errors %}
+
+    <p>Your USername or password was incorrect. Try again</p>
+
+{% endif %}
+
+<!-- STEP 2 : User is Authenticated-->
+
+{% if next %}
+
+<!-- STEP 2.a : Login -->
+{% if user.is_authendicate %}
+
+    <p>You dont have enough permission</p>
+
+{% else %}
+
+    <p>Please Login</p>
+
+{% endif %}
+
+
+
+{% endif %}
+
+<!-- STEP 2.b : Form -->
+
+<form method="POST" action = "{% url 'login' %}">
+
+{% csrf_token %}
+{{form.username.label_tag}}
+{{form.username}}
+{{form.password.label_tag}}
+{{form.password}}
+
+<input type="submit" value="login">
+<input type="hidden" name="next" value="{{next}}">
+
+</form>
+
+
+</html>
